@@ -47,7 +47,7 @@
    	// date
    	$date = date("Y-m-d");	// current date
 
-   	// check email
+   	// validate email
    	if($em == $em2){
    		if(filter_var($em, FILTER_VALIDATE_EMAIL)){
    			$em = filter_var($em, FILTER_VALIDATE_EMAIL);
@@ -61,13 +61,37 @@
    			if($num_rows > 0){
    				echo "email already in use";
    			}
-
    		}else{
    			echo "invalid format";
    		}
    	}else{
    		echo "email doesnt match";	
    	}
+
+
+   	// validate name
+   	if(strlen($fname) > 25 || strlen($fname) < 2){
+   		echo "invalid first name";
+   	}
+
+   	if(strlen($lname) > 25 || strlen($lname) < 2){
+   		echo "invalid last name";
+   	}
+
+
+   	// validate password
+   	if($password != $password2){
+   		echo "password doesnt match";
+   	}else{
+   		if(preg_match('/[^A-Za-z0-9]/', $password)){
+   			echo "password can only contain english characters and numbers";
+   		}
+   	}
+
+   	if(strlen($password) > 30 || strlen($password) < 5){
+   		echo "password must be between 5 and 30 characters";
+   	}
+
    }
 
 ?>
