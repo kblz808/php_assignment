@@ -16,6 +16,7 @@
    $password2 = "";
    $date = "";
    $error_array = array();	// error messages
+   $profile_pic = "";
 
 
    if(isset($_POST['register_button'])){
@@ -113,9 +114,31 @@
    			$username = $username . "_" . $i;
    			$check_username_query = mysqli_query($con, "SELECT username FROM users WHERE username='$username'");
    		}
+
+
+   		// profile picture
+   		$rand = rand(1, 2);
+   		if($rand == 1){
+   			$profile_pic = "assets/images/profile_pics/defaults/head_deep_blue.png";
+   		}else if($rand == 2){
+   			$profile_pic = "assets/images/profile_pics/defaults/head_emerald.png";
+   		}
+
+
+   		// save values in database
+   		$query = mysqli_query($con, "INSERT INTO users VALUES(NULL, '$fname', '$lname', '$username', '$em', '$password', '$date', '$profile_pic', 0, 0, 'no', ',')");
+
+
+   		// success message
+   		array_push($error_array, "<span style='color: #14C800;'>You're all set! Goahead and login </span><br>");
+
+
+   		// clear session variables
+   		$_SESSION['reg_fname'] = "";
+   		$_SESSION['reg_lname'] = "";
+   		$_SESSION['reg_email'] = "";
+   		$_SESSION['reg_email2'] = "";
    	}
-
-
    }
 
 ?>
@@ -188,6 +211,11 @@
 
 
 		<input type="submit" name="register_button" value="Register">
+
+		<br>
+
+		<?php if(in_array("<span style='color: #14C800;'>You're all set! Goahead and login </span><br>", $error_array)) echo "<span style='color: #14C800;'>You're all set! Goahead and login </span><br>";
+		?>
 
 	</form>
 
