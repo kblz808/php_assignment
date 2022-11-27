@@ -15,7 +15,6 @@
    <script src="assets/js/bootstrap.js"></script>
    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
 </head>
 <body>
 
@@ -32,6 +31,7 @@
          <a href="#">Notification</a>
          <a href="#">User</a>
          <a href="#">Settings</a>
+         <a href="/includes/handlers/logout.php">Logout</a>
       </nav>
 
    </div>
