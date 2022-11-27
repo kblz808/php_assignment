@@ -24,6 +24,18 @@ html, body{
 }
 
 
+p{
+	font-family: 'DMSans-Medium';
+	font-size: 14px;
+	color: #2f3542;
+}
+
+a{
+	font-family: 'DMSans-Medium';
+	text-decoration: none;
+	color: #5352ed;
+	font-size: 14px;
+}
 
 form{
 	text-align: center;
@@ -102,4 +114,8 @@ input[type="submit"]{
 /* submit button hover */
 input[type="submit"]{
 	cursor: pointer;
+}
+
+#second{
+	display: none;
 }
