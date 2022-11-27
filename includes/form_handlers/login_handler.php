@@ -19,10 +19,18 @@
 				$reopen_account = mysqli_query($con, "UPDATE users SET user_closed='no' WHERE email='$email'");
 			}
 
+			// clear session variables
+	   		$_SESSION['reg_fname'] = "";
+	   		$_SESSION['reg_lname'] = "";
+	   		$_SESSION['reg_email'] = "";
+	   		$_SESSION['reg_email2'] = "";
+	   		$_SESSION['log_email'] = "";
+
 			// store username and redirect page
 			$_SESSION['username'] = $username;
 			header("Location: index.php");
 			exit();
+			
 		}else{
 			array_push($error_array, "Email or password was incorrect<br>");
 		}
