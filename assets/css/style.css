@@ -1,0 +1,64 @@
+@font-face{
+	font-family: 'DMSans-Regular';
+	src: url("../fonts/DMSans-Regular.ttf");
+}
+@font-face{
+	font-family: 'DMSans-Medium';
+	src: url("../fonts/DMSans-Medium.ttf");
+}
+@font-face{
+	font-family: 'DMSans-Bold';
+	src: url("../fonts/DMSans-Bold.ttf");
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+.top_bar{
+	width: 100%;
+	min-width: 640px;
+	height: 60px;
+	background-color: #5352ed;
+	border-bottom: 2px solid #2f3542;
+
+	margin: 0 0 12px 0;
+	display: inline-flex;
+}
+
+.logo a{
+	font-family: 'DMSans-Bold';
+	margin-left: 10px;
+	font-size: 140%;
+	position: relative;
+	top: 10px;
+}
+
+nav{
+	float: right;
+	right: 1px;
+	position: absolute;
+	margin: 10px;
+}
+
+nav a{
+	font-family: 'DMSans-Bold';
+	position: relative;
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+nav a:hover{
+	border-bottom: 4px solid white;
+	color: #ff6348;
+}

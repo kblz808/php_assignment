@@ -2,11 +2,6 @@
 	require 'config/config.php';
 	require 'includes/form_handlers/register_handler.php';
 	require 'includes/form_handlers/login_handler.php';
-	// session_start();
-   // $con = mysqli_connect("localhost", "phpmyadmin", "some_pass", "social");
-   // if(mysqli_connect_errno()){
-   //    echo "failed to connect" . mysqli_connect_errno();
-   // }
 ?>
 
 <!DOCTYPE html>
