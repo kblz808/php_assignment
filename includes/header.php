@@ -33,4 +33,7 @@
          <a href="#">User</a>
          <a href="#">Settings</a>
       </nav>
+
    </div>
+
+   <div class="wrapper">
