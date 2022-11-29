@@ -22,7 +22,7 @@ body{
 	background-color: #E6EAE8;
 }
 
-a{
+top_bar a{
 	text-decoration: none;
 	color: white;
 }
@@ -138,4 +138,24 @@ textarea:focus{
 	position: absolute;
 	outline: 0;
 	margin: 0;
+}
+
+
+/*---------------------*/
+
+
+.status_post{
+	width: 96%;
+	font-size: 15px;
+	padding: 0px 5px;
+	min-height: 75px;
+}
+
+.post_profile_pic{
+	float: left;
+	margin-right: 8px;
+}
+
+.post_profile_pic img{
+	border-radius: 8px;
 }
