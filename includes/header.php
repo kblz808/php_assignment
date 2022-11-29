@@ -12,6 +12,10 @@
 
 <html>
 <head>
+   <script
+   src="https://code.jquery.com/jquery-3.6.1.min.js"
+   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+   crossorigin="anonymous"></script>
    <script src="assets/js/bootstrap.js"></script>
    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
