@@ -1,5 +1,7 @@
 <?php
    require 'config/config.php';
+   include("includes/classes/User.php");
+   include("includes/classes/Post.php");
 
    if(isset($_SESSION['username'])){
       $userLoggedIn = $_SESSION['username'];
@@ -16,8 +18,8 @@
    src="https://code.jquery.com/jquery-3.6.1.min.js"
    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
    crossorigin="anonymous"></script>
-   <script src="assets/js/bootstrap.js"></script>
-   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+   <!-- <script src="assets/js/bootstrap.js"></script> -->
+   <!-- <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"> -->
    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
@@ -33,7 +35,7 @@
          <a href="index.php">Home</a>
          <a href="#">Message</a>
          <a href="#">Notification</a>
-         <a href="#">User</a>
+         <a href="requests.php">Requests</a>
          <a href="#">Settings</a>
          <a href="/includes/handlers/logout.php">Logout</a>
       </nav>
