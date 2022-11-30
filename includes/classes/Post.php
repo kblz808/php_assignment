@@ -114,6 +114,26 @@
 						$profile_pic = $user_row['profile_pic'];
 
 
+						?>
+
+						<script>
+							function toggle<?php echo $id; ?>(){
+								// alert("hello");
+								let element = document.getElementById("toggleComment<?php echo $id; ?>");
+
+								if(element.style.display == "block"){
+									// alert("display set to none");
+									element.style.display = "none";
+								}else{
+									// alert("display set to block");
+									element.style.display = "block";
+								}
+							}
+						</script>
+
+						<?php
+
+
 						// timeframe
 						$date_time_now = date("Y-m-d H:i:s");
 						$start_date = new DateTime($date_time);	// time of post
@@ -169,7 +189,7 @@
 							}
 						}
 
-						$str .= "<div class='status_post'>
+						$str .= "<div class='status_post' onClick='javascript:toggle$id()'>
 									<div class='post_profile_pic'>
 										<img src='$profile_pic' width='50'>
 									</div>
@@ -180,6 +200,10 @@
 
 									<div id='post_body'> $body <br> </div>
 
+								</div>
+
+								<div class='post_comment' id='toggleComment$id' style='display:none'>
+									<iframe src='comment_frame.php?post_id=$id' id='comment_iframe'></iframe>
 								</div>
 								<hr>";
 					}
