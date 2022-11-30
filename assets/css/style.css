@@ -169,6 +169,7 @@ textarea:focus{
 #comment_iframe{
 	max-height: 250px;
 	width: 100%;
+	margin-top: 6px;
 }
 
 .comment_section{
@@ -204,4 +205,38 @@ textarea:focus{
 	height: 50px;
 	margin-top: 3px;
 	position: absolute;
+}
+
+
+/*---------------------*/
+
+
+.newsFeedPostOptions{
+	padding: 0px;
+	text-decoration: none;
+	color: black;
+	border: none;
+}
+
+.newsFeedPostOptions iframe{
+	border: 0px;
+	height: 16px;
+	width: 120px;
+}
+
+.comment_like{
+	background-color: white;
+	border: none;
+	font-size: 14px;
+	color: #3498db;
+	padding: 0;
+
+	height: auto;
+	width: auto;
+	margin: 0;
+}
+
+.like_value{
+	display: inline;
+	font-size: 14px;
 }

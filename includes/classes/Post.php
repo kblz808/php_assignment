@@ -118,20 +118,29 @@
 
 						<script>
 							function toggle<?php echo $id; ?>(){
-								// alert("hello");
-								let element = document.getElementById("toggleComment<?php echo $id; ?>");
+								let target = $(event.target);
 
-								if(element.style.display == "block"){
-									// alert("display set to none");
-									element.style.display = "none";
-								}else{
-									// alert("display set to block");
-									element.style.display = "block";
+								// if target is not an a tag
+								if(!target.is("a")){
+									// alert("hello");
+									let element = document.getElementById("toggleComment<?php echo $id; ?>");
+
+									if(element.style.display == "block"){
+										// alert("display set to none");
+										element.style.display = "none";
+									}else{
+										// alert("display set to block");
+										element.style.display = "block";
+									}
 								}
 							}
 						</script>
 
 						<?php
+
+						// comments count
+						$comments_check = mysqli_query($this->con, "SELECT * FROM comments WHERE post_id='$id'");
+						$comments_check_num = mysqli_num_rows($comments_check);
 
 
 						// timeframe
@@ -198,14 +207,26 @@
 										<a href='$added_by'> $first_name $last_name </a> $user_to &nbsp;&nbsp;&nbsp;&nbsp;$time_message
 									</div>
 
-									<div id='post_body'> $body <br> </div>
+									<div id='post_body'> 
+										$body 
+									</div>
 
 								</div>
+
+
+
+								<div class='newsFeedPostOptions'>
+									Comments($comments_check_num)&nbsp;&nbsp;&nbsp;
+									<iframe src='like.php?post_id=$id' scrolling='no'></iframe>
+								</div>
+
+
 
 								<div class='post_comment' id='toggleComment$id' style='display:none'>
 									<iframe src='comment_frame.php?post_id=$id' id='comment_iframe'></iframe>
 								</div>
 								<hr>";
+
 					}
 				}	// end of while loop
 

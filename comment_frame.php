@@ -13,7 +13,6 @@
 ?>
 
 <html>
-<html>
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -142,6 +141,8 @@
 
 				<?php
 			}
+		}else{
+			echo "<center><br><br>No Comments to Show</center>";
 		}
 	?>
 
