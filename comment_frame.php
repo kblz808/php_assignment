@@ -5,6 +5,14 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
+
+<!-- 	<style>
+		*{
+			font-size: 14px;
+		}
+	</style> -->
+
+
 	<?php
 		require 'config/config.php';
 		include("includes/classes/User.php");
