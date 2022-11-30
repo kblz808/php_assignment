@@ -1,19 +1,58 @@
 <?php
-   require 'config/config.php';
-   // $con = mysqli_connect("localhost", "phpmyadmin", "some_pass", "social");
-   // if(mysqli_connect_errno()){
-   //    echo "failed to connect" . mysqli_connect_errno();
-   // }
+   include("includes/header.php");
+   include("includes/classes/User.php");
+   include("includes/classes/Post.php");
+   // session_destroy();
 
-   // $query = mysqli_query($con, "INSERT INTO test VALUES(NULL, 'max')");
+   // submit post
+   if(isset($_POST['post'])){
+      $post = new Post($con, $userLoggedIn);
+      $post->submitPost($_POST['post_text'], 'none');
+
+      // remove post resubmittion
+      header("Location: index.php");
+   }
 ?>
+   
+   <div class="user_details column">
+      <a href="<?php echo $userLoggedIn; ?>"><img src="<?php echo $user['profile_pic']; ?>"></a>
 
-<html>
-   <head>
-      <title></title>
-   </head>
 
-   <body>
-        hello <?php echo $_SESSION['username']; ?>
-   </body>
+      <div class="user_details_left_right">
+         <a href="<?php echo $userLoggedIn; ?>">
+         <?php
+            echo $user['first_name'] . " " . $user['last_name'];
+         ?>
+         </a>
+         <br>
+
+         <?php
+            echo "Posts: " . $user['num_posts']."<br>";
+            echo "Likes: " . $user['num_likes'];
+         ?>
+      </div>
+   </div>
+
+
+
+   <div class="main_column column">
+
+      <!-- user post -->
+      <form class="post_form" action="index.php" method="POST">
+
+         <textarea name="post_text" id="post_text" placeholder="Got something to say?"></textarea>
+
+         <input type="submit" name="post" id="post_button" value="Post">
+         <hr>      
+      </form>
+      <!-- user post -->
+
+      <?php
+         $user_obj = new User($con, $userLoggedIn);
+         echo$user_obj->getFirstAndLastName();
+      ?>
+   </div>
+
+   </div>
+</body>
 </html>

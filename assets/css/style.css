@@ -1,0 +1,141 @@
+@font-face{
+	font-family: 'DMSans-Regular';
+	src: url("../fonts/DMSans-Regular.ttf");
+}
+@font-face{
+	font-family: 'DMSans-Medium';
+	src: url("../fonts/DMSans-Medium.ttf");
+}
+@font-face{
+	font-family: 'DMSans-Bold';
+	src: url("../fonts/DMSans-Bold.ttf");
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+body{
+	background-color: #E6EAE8;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+.top_bar{
+	width: 100%;
+	min-width: 640px;
+	height: 60px;
+	background-color: #5352ed;
+	border-bottom: 2px solid #2f3542;
+
+	margin: 0 0 12px 0;
+	display: inline-flex;
+	position: fixed;
+	z-index: 10;
+}
+
+.logo a{
+	font-family: 'DMSans-Bold';
+	margin-left: 10px;
+	font-size: 140%;
+	position: relative;
+	top: 10px;
+}
+
+nav{
+	float: right;
+	right: 1px;
+	position: absolute;
+	margin: 10px;
+}
+
+nav a{
+	font-family: 'DMSans-Bold';
+	position: relative;
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+nav a:hover{
+	border-bottom: 4px solid white;
+	color: #ff6348;
+}
+
+.wrapper{
+	margin: 0 auto;
+	top: 80px;
+	position: relative;
+	padding: 0 10px;
+	width: 75%;
+/*	min-width: 950px;*/
+}
+
+.column{
+	background-color: white;
+	padding: 10px;
+	border: 1px solid #D3D3D3;
+	border-radius: 6px;
+	z-index: -1;
+}
+
+.user_details{
+	width: 250px;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.user_details_left_right{
+	width: 125px;
+	display: inline-block;
+	position: absolute;
+}
+
+.user_details img{
+	height: 125px;
+	border-radius: 6px;
+	margin-right: 6px;
+}
+
+.main_column{
+	float:right;
+	width: 70%;
+	z-index: -1;
+	min-height: 160px;
+}
+
+.post_form{
+	width: 100%;
+}
+
+.post_form textarea{
+	width: 80%;
+	height: 60px;
+	border-radius: 6px;
+	margin-right: 6px;
+	border: 1px solid #D3D3D3;
+	font-size: 12px;
+}
+
+textarea:focus{
+	outline: 0;
+}
+
+.post_form input[type="submit"]{
+	width: 10%;
+	height: 60px;
+	border: none;
+	border-radius: 10px;
+	background-color: darkblue;
+	color: white;
+	font-size: 90%;
+	position: absolute;
+	outline: 0;
+	margin: 0;
+}
