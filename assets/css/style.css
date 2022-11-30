@@ -285,7 +285,7 @@ textarea:focus{
 
 
 .danger{
-	background-color: red;
+	background-color: #e74c3c;
 }
 
 .warning{
@@ -305,7 +305,7 @@ textarea:focus{
 }
 
 .deep_blue{
-	background-color: #oo43f0;
+	background-color: #0043f0;
 }
 
 .profile_left input[type="submit"]{
@@ -317,4 +317,30 @@ textarea:focus{
 	color: white;
 	font-family: 'DMSans-Medium';
 	cursor: pointer;
+}
+
+
+/*---------------------*/
+
+
+#accept_button{
+	width: 20%;
+	height: 38px;
+	border-radius: 5px;
+	margin: 5px;
+	border: none;
+	color: white;
+	font-family: 'DMSans-Medium';
+	background-color: #2ecc71;
+}
+
+#ignore_button{
+	width: 20%;
+	height: 38px;
+	border-radius: 5px;
+	margin: 5px;
+	border: none;
+	color: white;
+	font-family: 'DMSans-Medium';
+	background-color: #e74c3c;
 }
