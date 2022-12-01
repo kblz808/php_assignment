@@ -14,8 +14,10 @@
 
 <html>
 <head>
-   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+   <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
    <script src="assets/js/bootstrap.js"></script>
+   <script src="assets/js/bootbox.min.js"></script>
    <script src="assets/js/demo.js"></script>
 
    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
