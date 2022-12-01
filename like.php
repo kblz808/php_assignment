@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
+	
 	<style>
 		body{
 			background-color: white;
@@ -17,6 +18,7 @@
 			top: 0;
 		}
 	</style>
+
 	<?php
 		require 'config/config.php';
 		include("includes/classes/User.php");
